@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 body {
-    background-color: #F0E9E4;
+    background-color: rgb(236, 247, 255);
     font-family: 'Nunito', sans-serif;
     padding: 40px;
 }
+
+li {
+    padding: 5px;
+}
+
+#lab_col { 
+    float: left;
+}
+
