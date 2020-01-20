@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Artist Directory --------------------------- */
+
+#artist_dir_box {
+    border: rgb(199, 199, 199) 1px solid;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#artist_dir_box input {
+    width: 100%;
+    height: 25px;
+}
+
+/* Artist Block-------------------------------- */
+
+.artist_block {
+    border: rgb(199, 199, 199) 1px solid;
+    border-top: none;
+    width: 70%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.artist_block:hover {
+    background-color: rgb(199, 199, 199);
+}
+
+.artist_desc {
+    padding-top: 5px;
+    width: auto;
+    height: 75px;
+}
+
+.artist_desc>h3 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.artist_desc>p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+
+}
+
+.artist_img {
+    float: left;
+    padding: 5px;
+    width: 65px;
+    height: auto;
+}
