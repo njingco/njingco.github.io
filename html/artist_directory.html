@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link href="../css/artist_directory_css.css" rel=" stylesheet">
+    <script src="../js/artist_directory_js.js"></script>
+</head>
+
+<body>
+    <div id="artist_dir_box">
+        <h1>Artist Directory</h1>
+        <div id="artist_search">
+            <input type="text">
+            <button class="btn_add_style" onclick="show_form()">Add</button>
+        </div>
+        <form id="artist_form" onsubmit="add_artist()" action="#">
+            <input class="form_input" id="form_name" type="text" name="input_name" placeholder="Artist Name"
+                required="required">
+            <input class="form_input" id="form_about" type="text" name="input_about" placeholder="About Artist"
+                required="required">
+            <input class="form_input" id="form_url" type="text" name="input_img" placeholder="Image URL"
+                required="required">
+            <input id="btn_submit"" class=" btn_add_style" type="submit" value="Add"></button>
+        </form>
+
+    </div>
+
+
+    <div id="artist_container">
+        <div class="artist_block">
+            <img class="artist_img" src="https://randomuser.me/api/portraits/med/men/1.jpg" alt="image" />
+            <div class="artist_desc">
+                <h3 class="artist_name">Barot Bellingham</h3>
+                <p class="artist_school">Royal Academy of Painting</p>
+            </div>
+            <button class="del_btn" onclick="delete_artist(this)">Delete</button>
+        </div>
+
+        <div class="artist_block">
+            <img class="artist_img" src="https://randomuser.me/api/portraits/med/men/2.jpg" alt="image" />
+            <div class="artist_desc">
+                <h3 class="artist_name">John Smith</h3>
+                <p class="artist_school">Painting Academy</p>
+            </div>
+            <button class="del_btn" onclick="delete_artist(this)">Delete</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
