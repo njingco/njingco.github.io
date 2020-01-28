@@ -11,10 +11,9 @@ function show_form() {
 
 // Adds the artist information from the form to the artist list
 function add_artist() {
-    console.log("Add Artist");
-    let name = document.getElementById("form_name").value;
-    let about = document.getElementById("form_about").value;
-    let url = document.getElementById("form_url").value;
+    let name = document.getElementById("form_name");
+    let about = document.getElementById("form_about");
+    let url = document.getElementById("form_url");
 
     let artist_container = document.getElementById("artist_container");
 
@@ -23,18 +22,18 @@ function add_artist() {
 
     let img_artist_img = document.createElement("img");
     img_artist_img.setAttribute("class", "artist_img");
-    img_artist_img.setAttribute("src", url);
+    img_artist_img.setAttribute("src", url.value);
 
     let div_artist_desc = document.createElement("div");
     div_artist_desc.setAttribute("class", "artist_desc");
 
     let h3_artist_name = document.createElement("h3");
     h3_artist_name.setAttribute("class", "artist_name");
-    h3_artist_name.textContent = name;
+    h3_artist_name.textContent = name.value;
 
     let p_artist_school = document.createElement("p");
     p_artist_school.setAttribute("class", "artist_school");
-    p_artist_school.textContent = about;
+    p_artist_school.textContent = about.value;
 
     let button_del_btn = document.createElement("button");
     button_del_btn.setAttribute("class", "del_btn");
@@ -49,6 +48,10 @@ function add_artist() {
     div_artist_block.append(button_del_btn);
 
     artist_container.append(div_artist_block);
+
+    let form = document.getElementById("artist_form");
+    form.reset();
+    form.style.display = "none";
 }
 
 // Deletes the Artist from the artist lists

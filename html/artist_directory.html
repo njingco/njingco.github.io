@@ -17,14 +17,14 @@
             <input type="text">
             <button class="btn_add_style" onclick="show_form()">Add Artist</button>
         </div>
-        <form id="artist_form" onsubmit="add_artist()" action="#">
-            <input class="form_input" id="form_name" type="text" name="input_name" placeholder="Artist Name"
+        <form id="artist_form" action="#">
+            <input class=" form_input" id="form_name" type="text" name="input_name" placeholder="Artist Name"
                 required="required">
             <input class="form_input" id="form_about" type="text" name="input_about" placeholder="About Artist"
                 required="required">
             <input class="form_input" id="form_url" type="text" name="input_img" placeholder="Image URL"
                 required="required">
-            <input id="btn_submit"" class=" btn_add_style" type="submit" value="Add"></button>
+            <input id="btn_submit"" class=" btn_add_style" value="Add" onclick="add_artist()"></button>
         </form>
     </div>
 
