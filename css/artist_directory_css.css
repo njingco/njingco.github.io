@@ -2,7 +2,9 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    min-width: 600px;
+    min-width: 650px;
+    /* max-width: 1000px; */
+    margin: 0 auto;
 }
 
 /* Artist Directory --------------------------- */
@@ -10,12 +12,17 @@ body {
 #artist_dir_box {
     border: rgb(199, 199, 199) 1px solid;
     width: 80%;
-    margin: 0 auto;
     padding: 10px;
+    margin: 0 auto;
+}
+
+#artist_search {
+    margin: 0 auto;
+    width: 80%;
 }
 
 #artist_search input {
-    width: 75%;
+    width: 70%;
     height: 30px;
     border: none;
     border: 1px solid rgb(199, 199, 199);
@@ -33,18 +40,26 @@ body {
     color: black;
 }
 
+.btn_add_style:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px #888888;
+}
+
 /* Add Artist Form Block------------------------ */
 
 #artist_form {
     display: none;
+    width: 40%;
+    margin: 0 auto;
     text-align: center;
 }
 
 .form_input {
-    width: 80%;
+    width: 100%;
     text-align: center;
     padding: 10px;
     clear: right;
+    border: 1px solid rgb(199, 199, 199);
 }
 
 #btn_submit {
@@ -104,8 +119,9 @@ body {
     width: 80px;
     border-radius: 10px;
     border: none;
-    float: left;
+    float: right;
     margin-top: 20px;
+    margin-right: 15px;
     clear: right;
 }
 
