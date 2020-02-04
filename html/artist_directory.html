@@ -5,18 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Artist Directory</title>
     <link href="../css/artist_directory_css.css" rel=" stylesheet">
     <script src="../js/artist_directory_js.js"></script>
 </head>
 
-<body>
+<body onload="set_artist_page()">
     <div id="artist_dir_box">
         <h1>Artist Directory</h1>
         <div id="artist_search">
-            <input type="text">
-            <button class="btn_add_style" onclick="show_form()">Add Artist</button>
-        </div>
+            <form id="search_form">
+                <input type="text" id="form_search_input" name="search_input">
+            </form>
+            <button class="btn_add_style" onclick="show_form()">Add</button>
+            <button class="btn_add_style" onclick="search()">Search</button>
+             </div>
         <form id="artist_form" action="#">
             <input class=" form_input" id="form_name" type="text" name="input_name" placeholder="Artist Name"
                 required="required">
@@ -29,23 +32,7 @@
     </div>
 
     <div id="artist_container">
-        <div class="artist_block">
-            <img class="artist_img" src="https://randomuser.me/api/portraits/med/men/1.jpg" alt="image" />
-            <div class="artist_desc">
-                <h3 class="artist_name">Barot Bellingham</h3>
-                <p class="artist_school">Royal Academy of Painting</p>
-            </div>
-            <button class="del_btn" onclick="delete_artist(this)">Delete</button>
-        </div>
 
-        <div class="artist_block">
-            <img class="artist_img" src="https://randomuser.me/api/portraits/med/men/2.jpg" alt="image" />
-            <div class="artist_desc">
-                <h3 class="artist_name">John Smith</h3>
-                <p class="artist_school">Painting Academy</p>
-            </div>
-            <button class="del_btn" onclick="delete_artist(this)">Delete</button>
-        </div>
     </div>
 
 
