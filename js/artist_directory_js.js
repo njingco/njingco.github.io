@@ -77,7 +77,7 @@ function search() {
     set_no_artist();
 
     artistList.forEach(element => {
-      if (element.name.includes(input_name) && input_name.length != 0) {
+      if (element.name.toLowerCase().includes(input_name.toLowerCase()) && input_name.length != 0) {
         set_artist_block(element.name, element.about, element.url);
       }
     });
