@@ -76,16 +76,8 @@ function search() {
     // remove the artist blocks
     set_no_artist();
 
-    // find matches to the chars
     artistList.forEach(element => {
-      same = true;
-      for (let i = 0; i < input_name.length; i++) {
-        if (element.name[i].toLowerCase() != input_name[i].toLowerCase()) {
-          same = false;
-        }
-      }
-      // set the matching artist
-      if (same) {
+      if (element.name.includes(input_name) && input_name.length != 0) {
         set_artist_block(element.name, element.about, element.url);
       }
     });
