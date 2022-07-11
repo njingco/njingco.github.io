@@ -15,11 +15,11 @@ module.exports = {
     },
     fontSize:{
       nav_size: '26px',
-      title_size: '',
-      subtitle_size: '',
-      header_size: '',
-      body_size: '',
-      title_spacing: '1px'
+      section_title:'40px',
+      title_size: '24px',
+      body_size: '18px',
+      title_spacing: '1px',
+      tab_size:'52px',
     },
     extend: {
       colors: {
@@ -28,6 +28,7 @@ module.exports = {
         light_purple:"#cdc9df",
         dark_purple:"#5d5682",
         text_dark:"#211e32",
+        text_light:"#fff",
         nav_active:"#ffffff"
       },
     },

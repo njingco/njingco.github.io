@@ -1,14 +1,15 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export function LinkScroll(prop:any) {
     return(
         <Link 
             activeClass={"active"}
-            offset={-100}
+            offset={-120}
             spy={true}
             duration={500}
             smooth={true}
             to={prop.to}
+            className={"hover:border-b-2 border-dark_purple"}
         >        
             {prop.to}
         </Link>

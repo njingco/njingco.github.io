@@ -1,34 +1,41 @@
-import styled from "styled-components";
 import tw from "twin.macro";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import { Education } from "./section/Education";
 import { Profile } from "./section/Profile";
 import { Projects } from "./section/Projects";
-import { Volunteer } from "./section/Volunteer";
+import { Volunteers } from "./section/Volunteer";
 
 
 const AppContainer = tw.div`
+  text-text_dark
+  w-full
+  h-full
   flex
   flex-col
   min-h-screen
+  overflow-hidden
+
+`
+
+const Content = tw.div`
   w-full
-  h-full
-  
+  flex
+  flex-col
+  items-center
 `
-const Filler = tw.div`
-  flex-grow
-`
+
 
 function App() {
   return (
-    
     <AppContainer>
       <Navbar/>
-      <Profile/>
-      <Education/>
-      <Projects/>
-      <Volunteer/>
+      <Content>
+        <Profile/>
+        <Education/>
+        <Projects/>
+        <Volunteers/> 
+      </Content>
       <Footer/>
     </AppContainer>
   );

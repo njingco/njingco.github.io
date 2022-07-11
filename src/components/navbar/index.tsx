@@ -1,14 +1,25 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { LinkScroll } from "./LinkScroll";
+import React, { useState } from 'react';
 
-const NavContainer = tw.div`
+const NavContainer = styled.div`
+  ${tw`
+    z-20
     w-full
     h-24
     items-center
     justify-center
-    sticky
+    fixed
     top-0
+    bg-transparent
+  `}
+  &.active{
+    ${tw`
+      transition-all
+      duration-500
+      bg-white
+    `}
 `
 const NavMenu  = styled.nav`
   ${tw`
@@ -17,10 +28,6 @@ const NavMenu  = styled.nav`
     justify-center
     p-5
   `}
-
-  &.active{
-    ${tw``}
-  }
 `
 
 const NavList  = styled.ul`
@@ -28,10 +35,6 @@ const NavList  = styled.ul`
       flex
       gap-8
   `}
-
-  &.active{
-    ${tw``}
-  }
 `
 
 const NavItem  = styled.li`
@@ -44,12 +47,10 @@ const NavItem  = styled.li`
    & .active{
       ${tw`
         border-b-2
-        border-dark_purple
     `}
    }
 `
   
-
 function Navbar() {
   const Menu = 
   <NavMenu>
@@ -58,12 +59,23 @@ function Navbar() {
       <NavItem><LinkScroll to="Education"/></NavItem>
       <NavItem><LinkScroll to="Projects"/></NavItem>
       <NavItem><LinkScroll to="Volunteer"/></NavItem>
-      <NavItem><LinkScroll to="Contact"/></NavItem>
     </NavList>
   </NavMenu>
+ 
+  const [hasScrolled, sethasScrolled] = useState(false);
+  
+  window.onscroll = () => {
+    if (window.scrollY == 0){
+      sethasScrolled(false);
+    } else{
+      sethasScrolled(true);
+    }
+   
+  };
+  
 
   return (
-    <NavContainer>
+    <NavContainer className={hasScrolled? "active":""}>
         {Menu}
     </NavContainer>
   );
