@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { LinkScroll } from "./LinkScroll";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TiThMenu } from 'react-icons/ti';
 
 const NavContainer = styled.div`

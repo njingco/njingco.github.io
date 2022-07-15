@@ -1,5 +1,4 @@
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
-import { IoLogoLinkedin } from 'react-icons/io';
 import { ImMail } from 'react-icons/im';
 
 export interface Social{

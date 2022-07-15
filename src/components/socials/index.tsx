@@ -29,9 +29,6 @@ const Link = styled.a`
 
   
 `
-
-const Path = tw.path``
-
 function SocialStyled(prop:Social, theme:string){
   return (
       <SocialContainer>

@@ -1,5 +1,4 @@
-import tw from "twin.macro";
-import styled, { keyframes } from "styled-components";
+import { keyframes } from "styled-components";
 import { fadeIn, fadeInUp, fadeInRight } from 'react-animations'
 
 export const FadeIn = keyframes`${fadeIn}`;

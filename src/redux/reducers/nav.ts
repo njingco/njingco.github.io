@@ -1,5 +1,3 @@
-import * as action from "../actions/types";
-
 let initial_state = {
     isNavActive:false,
 };
