@@ -1,7 +1,8 @@
 import tw from "twin.macro";
+import styled from "styled-components";
 import { Section, BlobContainer } from "../../components/base";
 import { AllSocials } from "../../components/socials";
-import { Blob1, Blob3, Blob4, Blob5 } from "../../img/blobs";
+import { Blob3, Blob4, Blob5 } from "../../img/blobs";
 
 const ProfileContainter = tw.div`
     flex
@@ -15,14 +16,19 @@ const ProfileContainter = tw.div`
     lg:justify-center
 `
 
-const PicContainer = tw.div`
-    bg-dark_purple
-    w-72
-    h-72
-    rounded-full
+const PicContainer = styled.div`
+    ${tw`
+        bg-text_dark
+        w-72
+        h-72
+        rounded-full
+        p-1
+    `}   
 `
 
-const Picture = tw.img``
+const Picture = tw.img`
+    rounded-full
+`
 
 const DescContainer = tw.div`
     flex
@@ -36,19 +42,18 @@ const Name = tw.div`
     font-title
     text-[56px]
     line-height[72px]
-
+    text-center
+    md:text-left
     md:text-[72px]
 `
 const Desc = tw.div`
     font-subtitle
     text-[20px]
     mb-3
-    
+    text-center
+    md:text-left
     md:text-[22px]
 `
-
-
-
 
 export function Profile(){
     let lightBlob = {color:"#cdc9df", width:"100em", position:"top:-20em; right:20em", deg:"-5deg", flipped:true};
@@ -61,7 +66,7 @@ export function Profile(){
             <BlobContainer theme={blueBlob}>{Blob4()}</BlobContainer>
             <BlobContainer theme={darkBlob}>{Blob3()}</BlobContainer>
             <ProfileContainter>
-                <PicContainer><Picture/></PicContainer>
+                <PicContainer><Picture src="./img/profile/portrait.png"/></PicContainer>
                 <DescContainer>
                     <Name>Nicole Jingco</Name>
                     <Desc>Aspiring Software Developer</Desc>

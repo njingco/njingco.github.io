@@ -27,6 +27,7 @@ const Content = tw.div`
 
 
 function App() {
+  
   return (
     <AppContainer>
       <Navbar/>

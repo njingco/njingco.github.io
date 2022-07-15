@@ -18,7 +18,7 @@ export function Education(){
                 <Credential>
                     <Body>
                         <Desc style={Bold}>Bachelor of Technology in Computer Systems</Desc>
-                        <Desc>Specialization: Network Security</Desc>
+                        <Desc>Specialization: Network Security Applications Development</Desc>
                         <Desc>2020-2022</Desc>
                     </Body>
                     <Body >

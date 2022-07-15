@@ -4,23 +4,33 @@ import {AllSocials} from "../socials";
 
 
 const FooterContainer = styled.div`
-  background-image: url("/img/blob/footer.svg");
-
   ${tw`
-    bg-dark_purple
-    w-full
-    h-24
-    flex
-    justify-center
-    items-center
-    `
-  }
+      // bg-dark_purple
+      h-44
+      bg-top
+      flex
+      items-end
+      pt-24
+      bg-repeat-x
+  `}
+  background-image: url('/img/blob/footer2.svg');
 `
+const Content = tw.div`
+  w-full
+  h-full
+  p-3
+  flex
+  justify-center
+  bg-dark_purple
+`
+
 
 function Footer() {
   return (
     <FooterContainer>
-      <AllSocials theme="light"/>
+      <Content>
+        <AllSocials theme="light"/>
+      </Content>
     </FooterContainer>
   );
 }

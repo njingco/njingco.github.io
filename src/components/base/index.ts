@@ -43,12 +43,10 @@ export const Desc = tw.p`
     text-body_size
 `
 
-export const TempImg = tw.div`
+export const Img = tw.img`
     bg-dark_purple
     rounded-xl
-    max-w-sm
     w-full
-    h-52
     self-center
 `
 

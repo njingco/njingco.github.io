@@ -10,6 +10,7 @@ export function LinkScroll(prop:any) {
             smooth={true}
             to={prop.to}
             className={"hover:border-b-2 border-dark_purple"}
+            onClick={prop.onClick}
         >        
             {prop.to}
         </Link>

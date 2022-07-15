@@ -1,26 +1,53 @@
+import styled from "styled-components";
 import tw from "twin.macro";
 import { BlobContainer, Body, Bold, Container, Desc, Section, SectionTitle, Title } from "../../components/base";
-import { Volunteer, WiC } from "./VolunteerList";
+import { Volunteer, VolunteerList } from "./VolunteerList";
 import { Blob1, Blob2 } from "../../img/blobs";
+import React, { useRef, useCallback } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { FadeIn } from "../../components/base/transition";
 
-const VolunteerContainer = tw.div`
-    grid
-    gap-10
-    justify-center
+const VolunteerContainer = styled.div`
+    ${tw`
+        grid
+        gap-10
+        justify-center
 
-    md:grid-cols-2
+        md:grid-cols-2
+    `}    
 `
 
-function VolunteerFormat(vol:Volunteer){
-    return (
-    <Body >
-        <Title>{vol.title}</Title>
-        <Desc style={Bold}>{vol.role}</Desc>
-        <Desc>{vol.description}</Desc>
-        <Desc>{vol.date}</Desc>
-    </Body>)
-}
+const ContainerFade = styled.div`
+    ${tw`
+        mb-5
+    `}
+    &.inView {
+        animation: 1s ${FadeIn};
+    }
+`
 
+function VolunteerFormat(vol:Volunteer, key:number){
+    const ref = useRef();
+    const [inViewRef, inView] = useInView();
+
+    const setRefs = useCallback(
+        (node:any) => {
+            ref.current = node;
+            inViewRef(node);
+        },
+        [inViewRef],
+    );
+
+    return (
+        <Body ref={setRefs} key={key} >
+            <ContainerFade className={inView?"inView":""}>
+                <Title>{vol.title}</Title>
+                <Desc className="mb-3" style={Bold}>{vol.role} ({vol.date})</Desc>
+                <Desc>{vol.description}</Desc>
+            </ContainerFade>
+        </Body>
+    )
+}
 
 export function Volunteers(){
     let lightBlob = {color:"#cdc9df", width:"80em", position:"top:-30em; right:55em", deg:"80deg", flipped:true};
@@ -33,11 +60,11 @@ export function Volunteers(){
             <SectionTitle>Volunteer</SectionTitle>
             <Container>
                 <VolunteerContainer >
-                    {VolunteerFormat(WiC)}
-                    {VolunteerFormat(WiC)}
-                    {VolunteerFormat(WiC)}
-                    {VolunteerFormat(WiC)}
-                    {VolunteerFormat(WiC)}
+                    {
+                        VolunteerList.map((vol:Volunteer, key:number)=>{
+                            return VolunteerFormat(vol, key)
+                        })
+                    }
                 </VolunteerContainer>
             </Container>
         </Section>
