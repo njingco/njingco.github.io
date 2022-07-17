@@ -19,6 +19,7 @@ module.exports = {
       body_size: '18px',
       title_spacing: '1px',
       tab_size:'52px',
+      prj_text_size:'14px',
     },
     extend: {
       colors: {

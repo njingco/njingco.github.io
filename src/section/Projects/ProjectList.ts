@@ -10,30 +10,39 @@ export interface Project{
 export const GuavaGirl:Project = {
     project:"Guava Girl Fruit Stand",
     role:"Front-End Developer",
-    desc:"Worked in a team of 3 to develop the Guava Girls Market Place. I developed the websites from the main group's artist wireframes Front-end and implemented the Wallet Authentication.",
+    desc:"Earn daily $GUAVAS for holding your Guava Girl NFTs!",
     tech:"React, HTML5, SCSS, TypeScript, Tailwind, Redux, Node.js, web3",
-    link:null,
-    img:"./img/projects/gg.png"
+    link:"https://guavagirlsrewards.com/",
+    img:"./img/projects/gg_mockup.png"
 }
 
 const WiC:Project = {
     project:"WiC Club Website",
     role:"Full Stack Developer",
-    desc:"I designed and developed the BCIT's Women in Computing website. I create the design using Figma, implemented the database using Firebase and built the website using React and Typescript.",
+    desc:"BCIT's Women in Computing Club aims to empower, promote and connect female computings student. ",
     tech:"React, HTML5, CSS3, TypeScript, Firebase",
     link:"https://wic-bcit.github.io/WiC/#/",
-    img:"./img/projects/wic.png"
+    img:"./img/projects/wic_mockup.png"
 }
 
 const Goverlytics:Project = {
     project:"Goverlytics",
     role:"Full Stack Developer",
-    desc:"Worked in a team of five to develop a web-based solution to visualize US Congressional data in an intuitive way for end users. My role was visualizing the political data using tables and graphs.",
+    desc:"Goverlytics is a web-based solution to visualize US Congressional data in an intuitive way for end users.",
     tech:"Python, Django, SQLite, JavaScript, HTML5, CSS3, ChartsJS",
     link:"https://ioto.ca/goverlytics.html",
     img:"./img/projects/gov.png"
 }
 
+const Stego :Project = {
+    project:"Steganography Application",
+    role:"Software Developer",
+    desc:"Secure an image by storing it within another image with encryption. ",
+    tech:"C, OpenSSL",
+    link:"https://github.com/njingco/Steganography",
+    img:"./img/projects/stego.png",
+}
+
 export const ProjectList:Project[] = [
-    GuavaGirl, WiC,Goverlytics
+    GuavaGirl, WiC, Goverlytics, Stego
 ]

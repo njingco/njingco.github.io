@@ -3,17 +3,16 @@ import tw from "twin.macro";
 import { BlobContainer, Body, Bold, Container, Desc, Section, SectionTitle, Title } from "../../components/base";
 import { Volunteer, VolunteerList } from "./VolunteerList";
 import { Blob1, Blob2 } from "../../img/blobs";
-import React, { useRef, useCallback } from 'react';
+import  { useRef, useCallback } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FadeIn } from "../../components/base/transition";
 
 const VolunteerContainer = styled.div`
     ${tw`
-        grid
-        gap-10
+        flex
+        flex-col
+        gap-3
         justify-center
-
-        md:grid-cols-2
     `}    
 `
 

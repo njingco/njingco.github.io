@@ -43,12 +43,7 @@ export const Desc = tw.p`
     text-body_size
 `
 
-export const Img = tw.img`
-    bg-dark_purple
-    rounded-xl
-    w-full
-    self-center
-`
+
 
 export const BlobContainer =  styled.div`
     ${tw`
