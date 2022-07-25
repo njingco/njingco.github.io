@@ -3,7 +3,6 @@ import tw from "twin.macro";
 import { BlobContainer, Body, Bold, Container, Desc, Section, SectionTitle, Title } from "../../components/base";
 import { Volunteer, VolunteerList } from "./VolunteerList";
 import { Blob1, Blob2 } from "../../img/blobs";
-import  { useRef, useCallback } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FadeIn } from "../../components/base/transition";
 
@@ -26,19 +25,15 @@ const ContainerFade = styled.div`
 `
 
 function VolunteerFormat(vol:Volunteer, key:number){
-    const ref = useRef();
-    const [inViewRef, inView] = useInView();
+    const [ref, inView] = useInView({
+        threshold:0,
+        triggerOnce:true
+    });
 
-    const setRefs = useCallback(
-        (node:any) => {
-            ref.current = node;
-            inViewRef(node);
-        },
-        [inViewRef],
-    );
+    
 
     return (
-        <Body ref={setRefs} key={key} >
+        <Body ref={ref} key={key} >
             <ContainerFade className={inView?"inView":""}>
                 <Title>{vol.title}</Title>
                 <Desc className="mb-3" style={Bold}>{vol.role} ({vol.date})</Desc>

@@ -4,7 +4,6 @@ import { BlobContainer, Bold,  Section, SectionTitle, Title } from "../../compon
 import { Project, ProjectList } from "./ProjectList";
 import { Blob2, Blob3 } from "../../img/blobs";
 import { FadeInUp } from "../../components/base/transition";
-import { useCallback, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 
 const ProjectContainer = styled.div`
@@ -118,19 +117,14 @@ export const Desc = tw.p`
 `
 
 function ProjectFormat(prj:Project, key:number){   
-    const ref = useRef();
-    const [inViewRef, inView] = useInView();
+    const [ref, inView] = useInView({
+        threshold:0,
+        triggerOnce:true
+    });
 
-    const setRefs = useCallback(
-        (node:any) => {
-            ref.current = node;
-            inViewRef(node);
-        },
-        [inViewRef],
-    );
-
+    
     return(
-        <ContainerFade ref={setRefs}  key={key} >
+        <ContainerFade ref={ref}  key={key} >
             <Container className={inView?"inView":""}>
                 <ProjectInfo>
                     <Title >{prj.project}</Title>
