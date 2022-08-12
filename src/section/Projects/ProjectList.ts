@@ -12,7 +12,7 @@ export const GuavaGirl:Project = {
     role:"Front-End Developer",
     desc:"Earn daily $GUAVAS for holding your Guava Girl NFTs!",
     tech:"React, HTML5, SCSS, TypeScript, Tailwind, Redux, Node.js, web3",
-    link:"https://guavagirlsrewards.com/",
+    link:"https://guavagirlsrewards.com/dashboard",
     img:"./img/projects/gg_mockup.png"
 }
 
