@@ -6,7 +6,6 @@ import { Profile } from "./section/Profile";
 import { Projects } from "./section/Projects";
 import { Volunteers } from "./section/Volunteer";
 
-
 const AppContainer = tw.div`
   text-text_dark
   w-full
@@ -16,28 +15,27 @@ const AppContainer = tw.div`
   min-h-screen
   overflow-hidden
 
-`
+`;
 
 const Content = tw.div`
   w-full
   flex
   flex-col
   items-center
-`
-
+`;
 
 function App() {
-  
+  const test = "test";
   return (
     <AppContainer>
-      <Navbar/>
+      <Navbar />
       <Content>
-        <Profile/>
-        <Education/>
-        <Projects/>
-        <Volunteers/> 
+        <Profile />
+        <Education />
+        <Projects />
+        <Volunteers />
       </Content>
-      <Footer/>
+      <Footer />
     </AppContainer>
   );
 }
