@@ -25,7 +25,7 @@ const Content = tw.div`
 `;
 
 function App() {
-  const test = "test";
+  const test = "testing";
   return (
     <AppContainer>
       <Navbar />
