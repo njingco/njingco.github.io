@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { LinkScroll } from "./LinkScroll";
-import { useState } from 'react';
-import { TiThMenu } from 'react-icons/ti';
+import { useState } from "react";
+import { TiThMenu } from "react-icons/ti";
 
 const NavContainer = styled.div`
   ${tw`
@@ -21,10 +21,10 @@ const NavContainer = styled.div`
     ${tw`
       md:bg-white
     `}
-`
+`;
 
-const NavIcon  = styled.div`
-    ${tw`
+const NavIcon = styled.div`
+  ${tw`
       absolute
       z-30
       top-5
@@ -33,30 +33,30 @@ const NavIcon  = styled.div`
       md:hidden
     `}
 
-    svg{
-      ${tw`
+  svg {
+    ${tw`
         w-7
         h-7
         text-text_dark
       `}
-    }
+  }
 
-    &.active{
-      ${tw`
+  &.active {
+    ${tw`
 
       `}
-    }
-`
-const NavMenu  = styled.nav`
+  }
+`;
+const NavMenu = styled.nav`
   ${tw`
     flex
     items-center
     justify-center
     p-5
   `}
-`
+`;
 
-const NavList  = styled.ul`
+const NavList = styled.ul`
   ${tw`
       bg-white
       flex
@@ -81,55 +81,93 @@ const NavList  = styled.ul`
       
   `}
 
-  &.active{
+  &.active {
     ${tw`
       visible
       top-0  
     `}
   }
-`
+`;
 
-const NavItem  = styled.li`
+const NavItem = styled.li`
   ${tw`
       font-subtitle
       cursor-pointer
       p-2
   `}
 
-   & .active{
-      ${tw`
+  & .active {
+    ${tw`
         border-b-2
     `}
-   }
-`
+  }
+`;
 
-
-  
 function Navbar() {
- const [hasScrolled, sethasScrolled] = useState(false);
- const [navActive, setnavActive] = useState(false);
-  
+  const [hasScrolled, sethasScrolled] = useState(false);
+  const [navActive, setnavActive] = useState(false);
+
   window.onscroll = () => {
-    if (window.scrollY === 0){
+    if (window.scrollY === 0) {
       sethasScrolled(false);
-    } else{
+    } else {
       sethasScrolled(true);
     }
   };
-  
 
   return (
-    <NavContainer className={hasScrolled? "active":""}>
-        <NavMenu>
-          <NavIcon  className={navActive?"active":"" } onClick={()=>{ setnavActive(!navActive) }}>
-            {<TiThMenu/>}
-          </NavIcon>
-          <NavList className={navActive?"active":""}>
-            <NavItem ><LinkScroll to="Profile" onClick={()=>{setnavActive(false)}}/></NavItem>
-            <NavItem ><LinkScroll to="Education" onClick={()=>{setnavActive(false)}}/></NavItem>
-            <NavItem ><LinkScroll to="Projects" onClick={()=>{setnavActive(false)}}/></NavItem>
-            <NavItem ><LinkScroll to="Volunteer" onClick={()=>{setnavActive(false)}}/></NavItem>
-          </NavList>
+    <NavContainer className={hasScrolled ? "active" : ""}>
+      <NavMenu>
+        <NavIcon
+          className={navActive ? "active" : ""}
+          onClick={() => {
+            setnavActive(!navActive);
+          }}
+        >
+          {<TiThMenu />}
+        </NavIcon>
+        <NavList className={navActive ? "active" : ""}>
+          <NavItem>
+            <LinkScroll
+              to="Profile"
+              onClick={() => {
+                setnavActive(false);
+              }}
+            />
+          </NavItem>
+          <NavItem>
+            <LinkScroll
+              to="Experience"
+              onClick={() => {
+                setnavActive(false);
+              }}
+            />
+          </NavItem>
+          <NavItem>
+            <LinkScroll
+              to="Education"
+              onClick={() => {
+                setnavActive(false);
+              }}
+            />
+          </NavItem>
+          <NavItem>
+            <LinkScroll
+              to="Projects"
+              onClick={() => {
+                setnavActive(false);
+              }}
+            />
+          </NavItem>
+          <NavItem>
+            <LinkScroll
+              to="Volunteer"
+              onClick={() => {
+                setnavActive(false);
+              }}
+            />
+          </NavItem>
+        </NavList>
       </NavMenu>
     </NavContainer>
   );

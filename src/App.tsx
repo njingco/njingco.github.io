@@ -2,6 +2,7 @@ import tw from "twin.macro";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import { Education } from "./section/Education";
+import { Experience } from "./section/Experience";
 import { Profile } from "./section/Profile";
 import { Projects } from "./section/Projects";
 import { Volunteers } from "./section/Volunteer";
@@ -25,12 +26,12 @@ const Content = tw.div`
 `;
 
 function App() {
-  const test = "testing";
   return (
     <AppContainer>
       <Navbar />
       <Content>
         <Profile />
+        <Experience />
         <Education />
         <Projects />
         <Volunteers />
