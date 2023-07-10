@@ -38,7 +38,7 @@ export function Experience() {
             <Desc style={{ ...Italic, ...TopMargin }}>
               React, Redux, HTML, TypeScript, SCSS, Jest, AngularJS, Azure
             </Desc>
-            <Desc>October 2022 - Present</Desc>
+            <Desc>October 2022 - June 2023</Desc>
           </Body>
         </Credential>
       </Container>
