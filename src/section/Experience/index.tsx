@@ -22,6 +22,29 @@ export function Experience() {
     <Section id="Experience">
       <SectionTitle>Experience</SectionTitle>
       <Container>
+        <Title>Produce8 | Front-End Developer </Title>
+        <Credential>
+          <Body>
+            <Desc>
+              In my role, I contributed to enhancing our SaaS product across
+              multiple platforms, including web, mobile, browser plugins, and
+              desktop applications. My responsibilities included building new
+              features, ensuring they seamlessly integrated into our existing
+              systems. I transformed wireframes into responsive components,
+              ensuring optimal user experience across various devices.
+              Additionally, I was involved in designing features, contributing
+              to both the visual and functional aspects of our product to meet
+              the evolving needs of our users.
+            </Desc>
+            <Desc style={{ ...Italic, ...TopMargin }}>
+              React, React Native, Typescript, Styled Components, Electron,
+              GraphQL, Apollo, AWS,
+            </Desc>
+            <Desc>August 2023 - Present</Desc>
+          </Body>
+        </Credential>
+      </Container>
+      <Container>
         <Title>MetroQuest | Front-End Developer & UX/UI Designer</Title>
         <Credential>
           <Body>

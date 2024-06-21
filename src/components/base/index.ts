@@ -5,7 +5,7 @@ export const Filler = tw.div`
     flex-grow
 `;
 
-export const Bold = tw`font-weight[bold]`;
+export const Bold = tw`[font-weight:bold]`;
 export const Italic = tw`italic`;
 export const TopMargin = tw`mt-5`;
 
@@ -36,7 +36,7 @@ export const Body = tw.div`
 
 export const Title = tw.p`
     font-body
-    font-weight[bold]
+    [font-weight:bold]
     text-title_size
     mb-3
 `;

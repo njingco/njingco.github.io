@@ -41,7 +41,7 @@ const DescContainer = tw.div`
 const Name = tw.div`
     font-title
     text-[56px]
-    line-height[72px]
+    [line-height:72px]
     text-center
     md:text-left
     md:text-[72px]
